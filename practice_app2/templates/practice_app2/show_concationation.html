@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>show table</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>show data</h2>
+    <h2>key1</h2>
+    <!-- <h2>{{key1}}</h2> -->
+    <!-- <h2>{{key2}}</h2> -->
+    
+
+    
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>movie_name</th>
+            <th>character_name</th>
+            <!-- <th>Email</th>
+            <th>Password</th> -->
+            <!-- <th>sd_branch</th> -->
+            <!-- <th>sc_id</th -->
+            <!-- only for sc table -->
+            <!-- <th>sd_age</th>
+            <th>sd_contact</th>
+            <th>sd_city</th> -->
+            
+          </tr>
+        </thead>
+        <!-- getting single entry from database using indexing -->
+         
+        
+        {% if key1 %}
+        <tbody>
+            {% for i in key1 %}
+            <!-- <h2>i</h2> -->
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td>{{i.m_name}}</td>
+                    <td>{{i.c_name}}</td>
+                    <!-- <td>{{i.s_email}}</td>
+                    <td>{{i.s_emp_password}}</td> -->
+                    <!-- <td>{{i.sd_branch}}</td> -->
+                    <!-- <td>{{i.sc_id}}</td> -->
+                    <!-- only for sc table -->
+                    <!-- <td>{{i.sd_age}}</td>
+                    <td>{{i.sd_contact}}</td>
+                    <td>{{i.sd_city}}</td>  -->
+                    
+                </tr>
+                <form name="update_onetoone" action="{% url 'update_concatination_page' movie=i.m_name character=i.c_name %}" method="POST">
+                <!-- {/%/ url 'update_sc_page' email=i.s_email  branch=i.sd_branch %/}/ -->
+                <td>
+                  
+                  <form name="update_sc_page" action="" method="POST">
+                 
+                  
+                    
+                      {% csrf_token %}
+                      <input type="submit" value="update">
+        
+        
+                  </form>
+                </td>
+                
+              
+           
+            {% endfor %}
+    
+          
+        </tbody>
+        {% endif %}
+        
+        
+      </table>
+                
+
+</div>
+
+</body>
+</html>
+

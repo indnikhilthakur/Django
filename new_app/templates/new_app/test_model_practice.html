@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new_document</title>
+</head>
+<body>
+    <h1>rendering......!!</h1>
+    <center>
+        
+        <form action="{% url 'test_practice' %}" method="POST">
+            <!-- 'index' -->
+            <!-- 'validation' -->
+            <!-- 'email_validation' -->
+            <!-- {% url 'validation' %} -->
+            {% csrf_token %}
+            <table border="1">
+                <tr>
+                    <th>boolean_only</th>
+                <td><input type="checkbox" name="bool_checkbox" id=""></td>
+                </tr>
+                <tr>
+                    <th>boolean_multi</th>
+                <td><input type="checkbox" name="bool_checkbox_multi" id=""></td>
+                </tr> 
+                <tr>
+                    <th>char_field</th>
+                <td><input type="text" name="char" id=""></td>
+                </tr>
+                <tr>
+                    <th>date_field</th>
+                <td><input type="text" name="date" id=""></td>
+                </tr>
+                <tr>
+                    <th>decimal_field</th>
+                <td><input type="number" name="decimal" id=""></td>
+                </tr>
+                <tr>
+                    <th>email_field</th>
+                <td><input type="email" name="email" id=""></td>
+                </tr>
+                <tr>
+                    <th>file_field</th>
+                <td><input type="file" name="file" id=""></td>
+                </tr>
+                <tr>
+                    <th>image_field</th>
+                <td><input type="file" name="image" id=""></td>
+                </tr>
+                <tr>
+                    <th>integer_field</th>
+                <td><input type="number" name="integer" id=""></td>
+                </tr>
+                <tr>
+                    <th>slug_field</th>
+                <td><input type="text" name="slug" id=""></td>
+                </tr>
+                <tr>
+                    <th>text_field</th>
+                <td><input type="text" name="text" id=""></td>
+                </tr>
+                <tr>
+                    <th>url_field</th>
+                <td><input type="url" name="url" id="" ></td>
+                </tr>
+                <tr>
+                    <th>uuid1</th>
+                <td><input type="text" name="uuid1" id="" ></td>
+                </tr>
+                <tr>
+                    <th>uuid2</th>
+                <td><input type="text" name="uuid2" id="" ></td>
+                </tr>
+                <tr>
+                    <th>updated_date</th>
+                <td><input type="text" name="update_date" id="" ></td>
+                </tr>
+                <tr>
+                    <th>created_date</th>
+                <td><input type="text" name="created_date" id="" ></td>
+                </tr>
+                <tr>
+                    <th>date_and_time</th>
+                <td><input type="text" name="date_time" id="" ></td>
+                </tr>
+                <tr>
+                    <th>choice_field</th>
+                <td><input type="text" name="choices" id="" ></td>
+                </tr>
+                
+                <tr>
+                    
+                <td><input type="submit" value="insert" ></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

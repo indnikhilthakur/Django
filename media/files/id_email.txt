@@ -1,0 +1,13 @@
+get_data_id = new_model.objects.filter(id=id).first()
+    get_data_email = new_model.objects.filter(email=email).first()
+    print(get_data_email)
+    print(get_data_id)
+
+    if get_data_id == None and get_data_email == None:
+        print("id and email does not exist")        
+    elif get_data_id == None and get_data_email != None:
+        print("email does not exist")
+    elif get_data_id != None and get_data_email == None:
+        print("email does not exist")
+    else:
+        print("id and email existed")

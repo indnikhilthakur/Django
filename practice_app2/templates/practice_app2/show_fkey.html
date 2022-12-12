@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>show table</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>show data</h2>
+    <h2>{{key1}}</h2>
+    <h2>{{key2}}</h2>
+    
+   
+                
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First_name</th>
+        <th>Last_name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>sd_branch</th>
+        
+        <th>sd_age</th>
+        <th>sd_contact</th>
+        <th>sd_city</th>
+        
+    </thead>
+    <tbody>
+    
+            <tr>
+                <td>{{key1.id}}</td>
+                <td>{{key1.s_first_name}}</td>
+                <td>{{key1.s_last_name}}</td>
+                <td>{{key1.s_email}}</td>
+                <td>{{key1.s_emp_password}}</td>
+                <td>{{key2.sd_branch}}</td>
+                
+                <td>{{key2.sd_age}}</td>
+                <td>{{key2.sd_contact}}</td>
+                <td>{{key2.sd_city}}</td> 
+                
+            </tr>
+            
+
+      
+    </tbody>
+    
+    
+    
+  </table>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Form</title>
+</head>
+<body>
+    <h1>rendering......!!</h1>
+    <h2>Update Form</h2>
+
+    <center>
+        {% if key3 %}
+        <form action="{% url 'update_data' email=key3.email %}" method="POST">
+            {% csrf_token %}
+            <table border="1">
+                <tr>
+                    <th>first_name</th>
+                <td><input type="text" name="f_name" value="{{key3.first_name}}"></td>
+                </tr>
+                <tr>
+                    <th>last_name</th>
+                <td><input type="text" name="l_name" value="{{key3.last_name}}"></td>
+                </tr>
+                <tr>
+                    <th>email_id</th>
+                <td><input type="text" name="email" value="{{key3.email}}"></td>
+                </tr>
+                <tr>
+                    <th>emp_password</th>
+                <td><input type="text" name="psd" value="{{key3.emp_password}}"></td>
+                </tr>
+                <tr>
+                    
+                <td><input type="submit" value="update"></td>
+                </tr>
+            </table>
+        </form>
+        {% endif %}
+    </center>
+</body>
+</html>

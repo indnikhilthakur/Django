@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Form</title>
+</head>
+<body>
+    <h1>rendering......!!</h1>
+    <h2>Update Form</h2>
+    
+    <center>
+        {% if key1 %}
+        <form action="{% url 'update_sc' email=key1.s_email branch=key1.sc_branch %}" method="POST">
+            {% csrf_token %}
+            <table border="1">
+                <tr>
+                    <th>s_first_name</th>
+                <td><input type="text" name="f_name" value="{{key1.s_first_name}}" disabled/></td>
+                </tr>
+                <tr>
+                    <th>s_last_name</th>
+                <td><input type="text" name="l_name" value="{{key1.s_last_name}}" disabled/></td>
+                </tr>
+                <tr>
+                    <th>s_email</th>
+                <td><input type="text" name="email" value="{{key1.s_email}}" disabled/></td>
+                </tr>
+                <tr>
+                    <th>s_emp_password</th>
+                <td><input type="text" name="psd" value="{{key1.s_emp_password}}" disabled/></td>
+                </tr>
+                
+                    <th>sc_branch</th>
+                <td><input type="text" name="branch" value="{{key1.sc_branch}}" ></td>
+                </tr>
+                <tr>
+                    <th>sc_id</th>
+                <td><input type="number" name="sc_id" value="{{key1.sc_id}}" disabled/></td>
+                </tr>
+                
+                    
+                <td><input type="submit" value="update"></td>
+                </tr>
+            </table>
+        </form>
+        {% endif %}
+    </center>
+</body>
+</html>

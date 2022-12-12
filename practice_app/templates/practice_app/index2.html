@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>new_document</title>
+</head>
+<body>
+    <h1>rendering......!!</h1>
+    <center>
+        
+        <form action="{% url 'insert_practice_data' %}" method="POST">
+            <!-- 'index' -->
+            <!-- 'validation' -->
+            <!-- 'email_validation' -->
+            {% csrf_token %}
+            <table border="1">
+                <tr>
+                    <th>char_name_field2</th>
+                <td><input type="text" name="char_name" id="" /required></td>
+                </tr>
+                <tr>
+                    <th>integer_field</th>
+                <td><input type="number" name="integer" id="" /required></td>
+                </tr>
+                <tr>
+                    <th>slug_field</th>
+                <td><input type="text" name="slug" id="" /required></td>
+                </tr>
+                <tr>
+                <tr>
+                    <th>text_field</th>
+                <td><input type="text" name="text" id="" /required></td>
+                </tr>
+                <tr>
+                    <th>url_field</th>
+                <td><input type="url"  name="url" id="" ></td>
+               
+                </tr>
+                <!-- <tr>
+                    <th>city</th>
+                    <td>
+                        <select>
+                            <option value="one" selected="selected" name="city">
+                                pune
+                            </option>
+                            <option value="two" name="city">
+                                mumbai
+                            </option>
+                            <option value="three" name="city">
+                                goa
+                            </option>
+                            <option value="four" name="city">
+                                vengurla
+                            </option>
+                           </select>
+                    </td>
+                </tr>
+                <tr> -->
+                <td><input type="submit" value="insert" ></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

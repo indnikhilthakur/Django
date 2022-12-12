@@ -1,0 +1,48 @@
+<!-- getting single entry from database using indexing -->
+    <!-- <tbody>
+      <tr>
+        <td>{{ key2.id }}</td>
+        <td>{{ key2.first_name }}</td>
+        <td>{{ key2.last_name }}</td>
+        <td>{{ key2.email }}</td>
+        <td>{{ key2.emp_password }}</td>
+        <td>
+          <form name="update_form" action="{% url 'update_page' email=key2.email %}" method="POST">
+            
+              {% csrf_token %}
+              <input type="submit" value="update">
+
+
+          </form>
+      </td>
+      <td>
+          <form name="delete_form" action="{% url 'delete_data' pk=key2.id %}" method="POST">
+              {% csrf_token %}
+              <input type="submit" value="delete">
+
+
+          </form>
+      </td>
+      </tr>
+    </tbody>  -->
+
+
+
+
+
+
+
+class student(models.Model):
+    student_first_name = models.CharField(max_length=100)
+    student_last_name = models.CharField(max_length=100)
+    student_email = models.CharField(max_length=100)
+    student_password = models.CharField(max_length=100)
+
+    def __str__(self) -> str:
+        return self.student_first_name
+
+
+class student_details(models.Model):
+    st_branch = models.CharField(max_length=100)
+    student_age = models.CharField(max)
+    
